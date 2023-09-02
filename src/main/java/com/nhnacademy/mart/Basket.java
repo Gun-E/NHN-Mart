@@ -7,6 +7,7 @@ public class Basket {
 
     public void add(Food food) {
         foods.add(food);
+        MyLogger.getLogger().info("Basket add()");
     }
 
     public ArrayList<Food> getFoods() {

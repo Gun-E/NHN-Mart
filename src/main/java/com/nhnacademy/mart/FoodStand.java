@@ -6,7 +6,10 @@ public class FoodStand {
 
     private final ArrayList<Food> foods = new ArrayList<>();
 
-    public void add(Food food) {foods.add(food);}
+    public void add(Food food) {
+        MyLogger.getLogger().info("FoodStand add()");
+        foods.add(food);
+    }
 
     public ArrayList<Food> getFoods() {
         return foods;
@@ -21,8 +24,10 @@ public class FoodStand {
             }
 
             if (foods.size() -1 == i) {
+                MyLogger.getLogger().warning("상품 구매 에러(재고 부족)");
                 throw new IllegalArgumentException("재고가 부족합니다.");
             }
         }
+        MyLogger.getLogger().info("remove()");
     }
 }

@@ -17,3 +17,13 @@ c
 0src/main/java/com/nhnacademy/mart/FoodStand.java,d/0/d0c4069dd01f13c2bf4e1cf1c439ef4f85cc8c3c
 _
 /src/main/java/com/nhnacademy/mart/Customer.java,1/8/18c37a6689aa42bc6dc43b3c2c24ab1853c54585
+_
+/src/main/java/com/nhnacademy/mart/MyLogger.java,0/3/0317029c09777ee63b9d92d61ded414ce54010d0
+g
+7src/test/java/com/nhnacademy/mart/NhnMartShellTest.java,2/b/2ba4f0832e5811a5e79df094fa320173657f5dd2
+c
+3src/test/java/com/nhnacademy/mart/CustomerTest.java,8/d/8dd7058fe318a650476c155e4b7d1ee2e5164f44
+d
+4src/test/java/com/nhnacademy/mart/FoodStandTest.java,5/a/5ac2ca1e03c4b09e3fb1afe8ef41cfd0cfa9ca29
+b
+2src/test/java/com/nhnacademy/mart/CounterTest.java,7/0/70fee2c0043e8ddaa59a1b20ad2947dc2911edba

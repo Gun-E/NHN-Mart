@@ -22,29 +22,28 @@ public class NhnMartShell {
         geon.payTox(mart.getCounter());
     }
 
-    private static BuyList inputBuyListFromShell() {
+    public static BuyList inputBuyListFromShell() {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("NHN 마트에 오신 것을 환영합니다. 사고 싶은 물건을 골라주세요.");
 
-
-
         BuyList buyList = new BuyList();
-
         String input = sc.nextLine();
-        String [] part = input.split(" ");
+        if (input.isEmpty() || input.equals(" ")) {
+            MyLogger.getLogger().warning("입력 오류");
+            throw new IllegalArgumentException("입력 오류입니다.");
+        }
+        MyLogger.getLogger().info("고객이 입력한 구매 리스트 -> " + input);
+        String[] part = input.split(" ");
 
 
-        for(int i=0; i<part.length; i+=2){
-            if (!part[i].equals("양파") && !part[i].equals("계란") && !part[i].equals("파") && !part[i].equals("사과")) {
-                throw new IllegalArgumentException("식품 매대에 없는 상품 구매입니다.");
-            }
-            
-            BuyList.Item item = new BuyList.Item(part[i],Integer.parseInt(part[i+1]));
+        for (int i = 0; i < part.length; i += 2) {
+            BuyList.Item item = new BuyList.Item(part[i], Integer.parseInt(part[i + 1]));
 
             buyList.add(item);
         }
 
+        MyLogger.getLogger().info("inputBuyListFromShell");
         return buyList;
     }
 }
